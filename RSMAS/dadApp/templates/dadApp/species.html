@@ -1,0 +1,8 @@
+<h1> Add species for {{ nurseryName }} in {{siteName}}</h1>
+
+<h2> Please specify how many species you would like to input </h2>
+<form action='' method='post'>
+      {% csrf_token %}
+      {{ form }}
+      <input type='submit' value='Submit' />
+</form>

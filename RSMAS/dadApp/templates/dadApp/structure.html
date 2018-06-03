@@ -1,0 +1,20 @@
+<h1> Add structures for {{ nurseryName }} in {{siteName}}</h1>
+<!--
+<form action='' method='post'>
+       {{ forms }}
+    <input type='submit' value='Submit' />
+</form> -->
+
+<!-- <h2> Please specify how many structures you would like to input </h2>
+<form action='' method='post'>
+      {% csrf_token %}
+  <input type="number" name="quantity", min = "0, required = True">
+  <input type="submit">
+</form> -->
+
+<h2> Please specify how many structures you would like to input </h2>
+<form action='' method='post'>
+      {% csrf_token %}
+      {{ form }}
+      <input type='submit' value='Submit' />
+</form>
