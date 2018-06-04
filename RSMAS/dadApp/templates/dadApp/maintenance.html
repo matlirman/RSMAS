@@ -1,1 +1,8 @@
-<h1> Please specify the site and nursery you completed maintenance for </h1>
+<h1> Please indicate the maintenance you did for {{ nurseryName }} </h1>
+
+
+<form action='' method='post'>
+      {% csrf_token %}
+      {{ form }}
+      <input type='submit' value='Submit' />
+</form>

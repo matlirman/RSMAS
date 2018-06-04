@@ -47,3 +47,45 @@ class Damage(models.Model):
     nurseryName = models.CharField(max_length = 200)
     typeOfDamage = models.CharField(max_length = 200)
     DamageObservedDate = models.DateTimeField('Date of Observed Damage')
+
+class Outplant(models.Model):
+    id = models.AutoField(primary_key=True)
+    projectName = models.CharField(max_length = 200)
+    outplantSite = models.CharField(max_length = 200)
+    outplantDate = models.DateTimeField('Date of Collection')
+    outplantObserver = models.CharField(max_length = 100, default = 'Anonymous')
+    outplantLat = models.DecimalField(max_digits=9, decimal_places=6)
+    outplantLong = models.DecimalField(max_digits=9, decimal_places=6)
+
+class OutplantSpecies(models.Model):
+    id = models.AutoField(primary_key=True)
+    projectName = models.CharField(max_length = 200)
+    outplantSite = models.CharField(max_length = 200)
+    outplantDate = models.DateTimeField('Date of Collection')
+    outplantObserver = models.CharField(max_length = 100, default = 'Anonymous')
+    outplantSpeciesType = models.CharField(max_length = 200)
+    outplantSpeciesSmall = models.IntegerField(default = 0)
+    outplantSpeciesMedium = models.IntegerField(default = 0)
+    outplantSpeciesLarge = models.IntegerField(default = 0)
+    outplantSpeciesXLarge = models.IntegerField(default = 0)
+    outplantSpeciesTotal = models.IntegerField(default = 0)
+    speciesOutplantMethod = models.CharField(max_length = 100)
+
+class Collection(models.Model):
+    id = models.AutoField(primary_key=True)
+    collectionSite = models.CharField(max_length = 200)
+    collectionLat = models.DecimalField(max_digits=9, decimal_places=6)
+    collectionLong = models.DecimalField(max_digits=9, decimal_places=6)
+    collectionObserver = models.CharField(max_length = 100, default = 'Anonymous')
+    collectionDate = models.DateTimeField('Date of Collection')
+    collectionDepth = models.IntegerField(default = 0)
+
+class CollectionSpecies(models.Model):
+    id = models.AutoField(primary_key=True)
+    collectionSite = models.CharField(max_length = 200)
+    collectionDate = models.DateTimeField('Date of Collection')
+    collectionObserver = models.CharField(max_length = 100, default = 'Anonymous')
+    collectionSpecies = models.CharField(max_length = 200)
+    collectionColonySize = models.IntegerField(default = 0)
+    collectionFragments = models.IntegerField(default = 0)
+    collectionTLE = models.IntegerField(default = 0)

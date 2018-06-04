@@ -10,14 +10,14 @@
 
 <h2> If you would like to input information about a collection please click here! </h2>
 
-<form action='/collection/' method='post'>
+<form action='/collection/' method='get'>
     {% csrf_token %}
     <input type='submit' value='Submit' />
 </form>
 
 <h2> If you would like to input information about a outplant please click here! </h2>
 
-<form action='/outplant/' method='post'>
+<form action='/outplant/' method='get'>
     {% csrf_token %}
     <input type='submit' value='Submit' />
 </form>

@@ -1,0 +1,11 @@
+<h1> Please input information about the {{ numberOfSpeciesPlanted }} species you outplanted in {{ outplantSite }} for Project {{ projectName }} </h1>
+
+
+<form action='' method='post'>
+      {% csrf_token %}
+      {{ formset.management_form }}
+      {% for form in formset %}
+         {{ form.as_p }}
+      {% endfor %}
+      <input type='submit' value='Submit' />
+</form>

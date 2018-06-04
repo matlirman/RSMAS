@@ -1,8 +1,7 @@
-<h1> Please specify the damages you observed for {{ nurseryName }} </h1>
-
+<h1> Please input information on your collection </h1>
 
 <form action='' method='post'>
       {% csrf_token %}
-      {{ form }}
+      {{ formOne }}
       <input type='submit' value='Submit' />
 </form>
